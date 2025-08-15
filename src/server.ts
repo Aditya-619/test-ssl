@@ -15,6 +15,8 @@ server.post("/apiservice/webhook-callback", express.json({ type: "application/js
         reference: ${reference}, 
         amount: ${amount}, 
         customer: ${customer}`);
+    } else if(event.event === "charge.failed") {
+        console.log("Transaction failed");
     }
 
     res.sendStatus(200);

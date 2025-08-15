@@ -12,6 +12,9 @@ server.post("/apiservice/webhook-callback", express.json({ type: "application/js
         amount: ${amount}, 
         customer: ${customer}`);
     }
+    else if (event.event === "charge.failed") {
+        console.log("Transaction failed");
+    }
     res.sendStatus(200);
 });
 server.use(express.json());
