@@ -13,7 +13,7 @@ export const initializeTransaction = async (
       {
         email,
         amount: amount * 100,
-        callback_url: "http://kingslayer.space",
+        callback_url: "https://kingslayer.space/webhook-callback",
         metadata,
       },
       { headers }

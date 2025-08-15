@@ -6,7 +6,7 @@ export const initializeTransaction = async (email, amount, metadata) => {
         const response = await axios.post(`${PAYMENT_BASE_URL}/transaction/initialize`, {
             email,
             amount: amount * 100,
-            callback_url: "http://kingslayer.space",
+            callback_url: "https://kingslayer.space/webhook-callback",
             metadata,
         }, { headers });
         return response.data;
