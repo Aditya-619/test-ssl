@@ -8,7 +8,7 @@ const server = express();
 server.post("/apiservice/webhook-callback", express.json({ type: "application/json" }),
   async (req, res) => {
     const event = req.body;
-
+    console.log("event ------> ", event);
     if (event.event === "charge.success") {
       const { reference, amount, customer } = event.data;
       console.log(`saved columns in db -> 
